@@ -1,7 +1,7 @@
 import React from "react";
 import Form from "./Form";
 
-var userIsRegistered = false;
+export var userIsRegistered = false; // custom：true OR false
 
 function App() {
   return (
