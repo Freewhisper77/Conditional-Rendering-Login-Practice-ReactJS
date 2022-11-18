@@ -1,15 +1,14 @@
 import React from "react";
-import {userIsRegistered} from "./App";
 import Input from "./Input";
 
-
-function Form() {
+function Form(props) {
   return (
     <form className="form">
       <Input type="text" placeholder="Username" />
       <Input type="password" placeholder="Password" />
-        {(!userIsRegistered) && <Input type="password" placeholder="Confirm Password" /> }
-      <button type="submit">{userIsRegistered ? "Login" : "Register"}</button>
+        {/*props.后面写的是你自己给这个组件定义的属性名*/}
+        {(props.isRegistered) && <Input type="password" placeholder="Confirm Password" /> }
+      <button type="submit">{props.isRegistered ? "Login" : "Register"}</button>
     </form>
   );
 }
